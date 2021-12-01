@@ -1,1 +1,0 @@
-export { ShowImg } from './ShowImg';
