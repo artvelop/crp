@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/crp-page/static/css/main.04eaf74f.chunk.css",
+    "main.js": "/crp-page/static/js/main.f4ef516f.chunk.js",
+    "main.js.map": "/crp-page/static/js/main.f4ef516f.chunk.js.map",
+    "runtime-main.js": "/crp-page/static/js/runtime-main.51005d51.js",
+    "runtime-main.js.map": "/crp-page/static/js/runtime-main.51005d51.js.map",
+    "static/js/2.6a1ac848.chunk.js": "/crp-page/static/js/2.6a1ac848.chunk.js",
+    "static/js/2.6a1ac848.chunk.js.map": "/crp-page/static/js/2.6a1ac848.chunk.js.map",
+    "static/js/3.fa3b8bd5.chunk.js": "/crp-page/static/js/3.fa3b8bd5.chunk.js",
+    "static/js/3.fa3b8bd5.chunk.js.map": "/crp-page/static/js/3.fa3b8bd5.chunk.js.map",
+    "index.html": "/crp-page/index.html",
+    "static/css/main.04eaf74f.chunk.css.map": "/crp-page/static/css/main.04eaf74f.chunk.css.map",
+    "static/js/2.6a1ac848.chunk.js.LICENSE.txt": "/crp-page/static/js/2.6a1ac848.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/crp-page/static/media/RIDIBatang.80d8670c.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51005d51.js",
+    "static/js/2.6a1ac848.chunk.js",
+    "static/css/main.04eaf74f.chunk.css",
+    "static/js/main.f4ef516f.chunk.js"
+  ]
+}
