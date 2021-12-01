@@ -7,7 +7,7 @@ import { Step3 } from './components/Step3';
 import { Step4 } from './components/Step4';
 import { Step5 } from './components/Step5';
 
-const Dongchurl = () => {
+const Main = () => {
   return (
     <LayoutContainer>
       <Intro />
@@ -35,4 +35,4 @@ const End = styled.div`
   margin-top: 50vh;
 `;
 
-export default Dongchurl;
+export default Main;
