@@ -11,6 +11,7 @@ type Props = {
   hoverRotate: number;
   hoverX: number;
   hoverY: number;
+  handleClick: () => void;
 };
 
 export const IntroBox: React.FC<Props> = ({
@@ -21,11 +22,13 @@ export const IntroBox: React.FC<Props> = ({
   hoverRotate,
   hoverX,
   hoverY,
+  handleClick,
 }) => {
   const [boxHover, setBoxHover] = useState<boolean>(false);
 
   return (
     <Wrapper
+      onClick={handleClick}
       style={{
         zIndex: zIndex,
         rotate: rotate,
@@ -36,8 +39,9 @@ export const IntroBox: React.FC<Props> = ({
         y: isHover ? hoverY : 0,
         rotate: isHover ? hoverRotate : rotate,
       }}
-      onHoverStart={(e) => setBoxHover(true)}
-      onHoverEnd={(e) => setBoxHover(false)}>
+      onHoverStart={e => setBoxHover(true)}
+      onHoverEnd={e => setBoxHover(false)}
+    >
       <TyphoGraphy type="Title" color={boxHover ? '#fff' : '#000'}>
         <ResponsiveText>{content}</ResponsiveText>
       </TyphoGraphy>
@@ -62,6 +66,8 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 
   @media (min-width: 1200px) and (max-width: 1400px) {
     top: 32px;

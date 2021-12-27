@@ -3,9 +3,11 @@ import styled from '@emotion/styled';
 import { IntroduceCard } from '../IntroduceCard';
 import { Step1Box } from './Step1Box';
 
-export const Step1 = () => {
+type Props = {};
+
+export const Step1 = React.forwardRef<HTMLDivElement, Props>(({}, ref) => {
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <IntroduceCard title="DomTree생성">
         렌더링 엔진이 일을 시작하게 되면
         <br />
@@ -15,9 +17,11 @@ export const Step1 = () => {
       <Gap />
     </Wrapper>
   );
-};
+});
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin-top: 30vh;
+`;
 const Gap = styled.div`
   height: 200px;
 `;

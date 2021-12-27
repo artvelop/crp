@@ -33,7 +33,8 @@ export const IntroduceCard: React.FC<Props> = ({ children, title }) => {
         animate={{
           scale: [0, 1],
           opacity: visible ? [0, 1] : [1, 0],
-        }}>
+        }}
+      >
         <TyphoGraphy type="Title" textAlign="center" color="#000">
           {title}
         </TyphoGraphy>
@@ -43,7 +44,8 @@ export const IntroduceCard: React.FC<Props> = ({ children, title }) => {
           scale: [0, 1],
           opacity: visible ? [0, 1] : [1, 0],
         }}
-        transition={{ delay: visible ? 0.5 : 0 }}>
+        transition={{ delay: visible ? 0.5 : 0 }}
+      >
         <TyphoGraphy type="h1" textAlign="center" color="#000" fontHeight="1.5">
           {children}
         </TyphoGraphy>
@@ -53,7 +55,7 @@ export const IntroduceCard: React.FC<Props> = ({ children, title }) => {
 };
 
 const Wrapper = styled.div`
-  margin-top: 30vh;
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
 `;

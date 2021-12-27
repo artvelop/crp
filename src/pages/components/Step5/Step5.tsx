@@ -3,9 +3,11 @@ import styled from '@emotion/styled';
 import { IntroduceCard } from '..';
 import { Step5Box } from './Step5Box';
 
-export const Step5 = () => {
+type Props = {};
+
+export const Step5 = React.forwardRef<HTMLDivElement, Props>(({}, ref) => {
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <IntroduceCard title="Repaint">
         Reflow를 통해 배치된 레이아웃에
         <br />
@@ -14,6 +16,8 @@ export const Step5 = () => {
       <Step5Box />
     </Wrapper>
   );
-};
+});
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin-top: 30vh;
+`;

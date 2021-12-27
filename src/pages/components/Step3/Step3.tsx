@@ -3,9 +3,11 @@ import React from 'react';
 import { IntroduceCard } from '..';
 import { Step3Box } from './Step3Box';
 
-export const Step3 = () => {
+type Props = {};
+
+export const Step3 = React.forwardRef<HTMLDivElement, Props>(({}, ref) => {
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <IntroduceCard title="RenderTree구축">
         DomTree와 CssomTree가 합쳐져서
         <br />
@@ -14,6 +16,8 @@ export const Step3 = () => {
       <Step3Box />
     </Wrapper>
   );
-};
+});
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin-top: 30vh;
+`;

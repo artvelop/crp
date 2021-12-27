@@ -1,14 +1,48 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React, { useState, RefObject } from 'react';
 import { IntroBox } from './IntroBox';
 import { TyphoGraphy } from './TyphoGraphy';
+
+type Props = {
+  step1Ref: RefObject<HTMLDivElement>;
+  step2Ref: RefObject<HTMLDivElement>;
+  step3Ref: RefObject<HTMLDivElement>;
+  step4Ref: RefObject<HTMLDivElement>;
+  step5Ref: RefObject<HTMLDivElement>;
+};
 
 const vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-export const Intro = () => {
+export const Intro = ({
+  step1Ref,
+  step2Ref,
+  step3Ref,
+  step4Ref,
+  step5Ref,
+}: Props) => {
   const [hoverBox, setHoverBox] = useState<boolean>(false);
+
+  const step1Click = () => {
+    step1Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const step2Click = () => {
+    step2Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const step3Click = () => {
+    step3Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const step4Click = () => {
+    step4Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const step5Click = () => {
+    step5Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <Wrapper>
@@ -30,9 +64,11 @@ export const Intro = () => {
           </TyphoGraphy>
         </TitleWrapper>
         <BoxWrapper
-          onHoverStart={(e) => setHoverBox(true)}
-          onHoverEnd={(e) => setHoverBox(false)}>
+          onHoverStart={e => setHoverBox(true)}
+          onHoverEnd={e => setHoverBox(false)}
+        >
           <IntroBox
+            handleClick={step5Click}
             isHover={hoverBox}
             hoverRotate={2}
             hoverX={0}
@@ -42,6 +78,7 @@ export const Intro = () => {
             content="Repaint"
           />
           <IntroBox
+            handleClick={step4Click}
             hoverRotate={-2}
             hoverX={0}
             hoverY={-0}
@@ -51,6 +88,7 @@ export const Intro = () => {
             content="Reflow"
           />
           <IntroBox
+            handleClick={step3Click}
             hoverRotate={3}
             hoverX={0}
             hoverY={-200}
@@ -60,6 +98,7 @@ export const Intro = () => {
             content="Create RenderTree"
           />
           <IntroBox
+            handleClick={step2Click}
             hoverRotate={-4}
             hoverX={0}
             hoverY={-400}
@@ -69,6 +108,7 @@ export const Intro = () => {
             content="Create CssTree"
           />
           <IntroBox
+            handleClick={step1Click}
             hoverRotate={4}
             hoverX={0}
             hoverY={-600}
